@@ -7,7 +7,7 @@
 ?>
 <?php echo "<?php\n"; ?>
 
-class <?php echo $this->controllerClass; ?> extends <?php echo $this->baseControllerClass."\n"; ?> {
+class <?php echo $this->controllerClass; ?> extends <?php echo $this->baseControllerClass; ?> {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
@@ -30,7 +30,7 @@ class <?php echo $this->controllerClass; ?> extends <?php echo $this->baseContro
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
 				'actions'=>array('index','view','create','update','delete'),
-				'users'=>array('admin'),
+				'roles'=>array('admin'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
