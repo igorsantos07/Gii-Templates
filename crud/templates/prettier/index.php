@@ -9,7 +9,7 @@ echo "<?php\n";
 $label=$this->pluralize($this->class2name($this->modelClass));
 echo "\$this->breadcrumbs=array(
 	'$label'=>array('index'),
-	'Manage',
+	'List',
 );\n";
 ?>
 
@@ -31,7 +31,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage <?php echo $this->pluralize($this->class2name($this->modelClass)); ?></h1>
+<h1>List <?php echo $this->pluralize($this->class2name($this->modelClass)); ?></h1>
 
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
