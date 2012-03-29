@@ -29,12 +29,8 @@ $('.search-form form').submit(function(){
 
 <h1>Search <?php echo $this->pluralize($this->class2name($this->modelClass)); ?></h1>
 
-<?php echo "<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>"; ?>
-
-<div class="search-form" style="display:none">
-<?php echo "<?php \$this->renderPartial('_search',array(
-	'model'=>\$model,
-)); ?>\n"; ?>
+<div class="search-form">
+<?php echo "<? \$this->renderPartial('_search',array('model'=>\$model)) ?>\n"; ?>
 </div><!-- search-form -->
 
 <?php echo "<?"; ?> $this->widget('zii.widgets.grid.CGridView', array(
